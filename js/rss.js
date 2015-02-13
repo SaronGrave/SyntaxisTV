@@ -35,11 +35,10 @@ function parseXmlTweakers(xml) {
 
 // Check if parseXmlTweakers && parseXmlSax is ready, then add the items to the layout and show it.
 function combineAndShowResult() {
-
     if (saxReady && tweakersReady) {
 
         for (i = 0; i < 10; i++) {
-            if (i % 2 == 0) {
+            if (i % 2 === 0) {
                 $("#ticker").append("<li><span>Sax</span><a>" + saxList.shift() + "</a></li>");
             } else {
                 $("#ticker").append("<li><span>Tweakers</span><a>" + tweakersList.shift() + "</a></li>");

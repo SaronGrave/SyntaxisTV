@@ -1,5 +1,5 @@
-$(document).ready(function()
-{
+$(document).ready(function() {
+
     // init the clock
     updateClock();
     setInterval('updateClock()', 1000);
@@ -24,7 +24,7 @@ $(document).ready(function()
         mainSetup(data);
     });
 
-    // reload after 5 min.
+    // reload page after 5 min.
     window.setTimeout(function() {
         location.reload();
     }, 300000);
@@ -61,7 +61,7 @@ function mainSetup(data) {
     setInterval(mainFillIn, 15000);
 }
 
-// switch the activity showing
+// switch the Main_Content image
 function mainFillIn() {
     var size = mainList.length;
 
