@@ -55,11 +55,12 @@ body {
 }
 #activityContainer {
     width: 1540px;
+    margin: 2px 0;
 }
 #activityContainer img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display:block;
+    margin:auto;
+    max-height: 1008px;
 }
 
 .jcarousel-skin-tango img {

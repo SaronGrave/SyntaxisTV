@@ -54,50 +54,36 @@ var mainIndex;
 function mainSetup(data) {
     mainList = $.parseJSON(data);
 
-    $("#activityContainer").html("<img src='" + mainList[0] + "' style='max-height:100%;max-width:100%;'>");
+    $("#activityContainer").append("<img src='" + mainList[0] + "'/>");
     mainIndex = 0;
 
     // switch the activity every 10 seconds
-    setInterval('mainFillIn()', 15000);
-
+    setInterval(mainFillIn, 15000);
 }
 
 // switch the activity showing
 function mainFillIn() {
     var size = mainList.length;
 
-    $("#activityContainer").fadeOut(800);
-    if (mainIndex == (size - 1)) {
-        mainIndex = 0;
-        $("#activityContainer").html("<img src='" + mainList[mainIndex] + "' style='max-height:100%;max-width:100%;'>").hide();
-        sizeImg(mainList[mainIndex]);
-    } else {
-        mainIndex++;
-        $("#activityContainer").html("<img src='" + mainList[mainIndex] + "' style='max-height:100%;max-width:100%;'>").hide();
-        sizeImg(mainList[mainIndex]);
-    }
-    $("#activityContainer").fadeIn(800);
-}
-
-// function to get image size
-function sizeImg(location) {
-    var img = new Image();
-    var dimensions = new Array();
-    img.onload = function() {
-        //alert(this.width + 'x' + this.height);
-        dimensions.put(this.width);
-        dimensions.put(this.height);
-    };
-    img.src = 'http://www.google.com/intl/en_ALL/images/logo.gif';
-    return dimensions;
+    $("#activityContainer").fadeOut(600);
+    setTimeout(function() {
+        if (mainIndex === (size - 1)) {
+            mainIndex = 0;
+            $("#activityContainer").html("<img src='" + mainList[mainIndex] + "'/>");
+        } else {
+            mainIndex++;
+            $("#activityContainer").html("<img src='" + mainList[mainIndex] + "'/>");
+        }
+    }, 600);
+    $("#activityContainer").fadeIn(600);
 }
 
 // Set the sponsors bar
 function bannerSetup(data) {
     var list = $.parseJSON(data);
 
-    $.each(list, function(index, value) {
-        $("#carousel").append("<li><img src='" + window.location.href + value + "' /></li>");
+    $.each(list, function() {
+        $("#carousel").append("<li><img src='" + window.location.href + this + "' /></li>");
     });
 
     jQuery('#carousel').jcarousel({
