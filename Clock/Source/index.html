@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/flipclock.css">
+    </head>
+    <body>
+        <div class="your-clock"></div>
+
+        <script src="js/jquery-2.0.3.min.js"></script>
+        <script src="js/prefixfree.min.js"></script>
+        <script src="js/flipclock.min.js"></script>
+
+        <script>
+            var clock = new FlipClock($('.your-clock'), {
+                // ... your options here
+            });
+            clock.setTime(new Date().getTime());
+        </script>
+    </body>
+</html>
