@@ -3,7 +3,7 @@ $(document).ready(function() {
     // Setup
     setupClock();
     setupActivity();
-    setupBanner();
+    setupSponsors();
     setupNewsfeed();
     
     // Reload page every 5 minutes
@@ -36,18 +36,29 @@ function updateClock() {
     $("#clock").html(currentTimeString);
 }
 
-// Switch the displayed activity every 10 seconds
-var activity = 0;
+// Setup activity panel
 function setupActivity() {
-    if(activity >= activities.length) {
+    rotateActivity();
+    setInterval(rotateActivity, 10000);
+}
+
+// Rotates activities
+var activity = 0;
+function rotateActivity() {
+    if(activity >= activities.length-1) {
         activity = 0;
     }
-    $("#activity").attr("src", activities[activity]);
+    
+    $("#activity").fadeOut(500, function() {
+        $("#activity").attr("src", activities[activity]);
+        $(this).fadeIn(500);
+    });
+
     activity++;
 }
 
 // Setup the sponsors bar
-function setupBanner() {
+function setupSponsors() {
     jQuery('#carousel').jcarousel({
         auto: 5,
         scroll: 1,

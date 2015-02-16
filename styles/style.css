@@ -46,14 +46,16 @@ body {
 }
 
 #sponsors {
-    padding-top: 325px;
-    padding-left: 125px;
+    padding-top: 310px;
+    padding-left: 100px;
     text-align: center;
 }
 
 
 /** Footer */
 #footer {
+    position: fixed;
+    top: 1000px;
     height: 80px;
     color: #fff;
 }
@@ -69,26 +71,26 @@ body {
 
 /** JCarousel */
 .jcarousel-skin-tango img {
-    width: 150px;
-    height: 92px;
+    width: 200px;
+    height: 125px;
 }
 .jcarousel-skin-tango .jcarousel-direction-rtl {
     direction: rtl;
 }
 .jcarousel-skin-tango .jcarousel-container-horizontal {
-    width: 150px;
+    width: 200px;
     padding: 0px 0px;
 }
 .jcarousel-skin-tango .jcarousel-clip {
     overflow: hidden;
 }
 .jcarousel-skin-tango .jcarousel-clip-horizontal {
-    width:  150px;
-    height: 92px;
+    width:  200px;
+    height: 125px;
 }
 .jcarousel-skin-tango .jcarousel-item {
-    width: 150px;
-    height: 92px;
+    width: 200px;
+    height: 125px;
 }
 .jcarousel-skin-tango .jcarousel-item-horizontal {
     margin-left: 0;
@@ -101,4 +103,45 @@ body {
 .jcarousel-skin-tango .jcarousel-item-placeholder {
     background: #000;
     color: #fff;
+}
+
+
+/* liScroll */
+.tickercontainer { /* outer div */
+    width: 1600px;
+    height: 58px;
+    padding: 0;
+    overflow: hidden;
+    font-size: 42px;
+}
+
+.tickercontainer .mask { /* that serves as a mask. so you get a sort of padding both left and right */
+    position: relative;
+    top: 10px;
+    width: 1620px;
+    overflow: hidden;
+}
+
+ul.newsticker { /* that's your list */
+    position: relative;
+    left: 1600px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.newsticker li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+ul.newsticker a {
+    white-space: nowrap;
+    padding: 0;
+    margin: 0 80px 0 0;
+}
+
+ul.newsticker span {
+    margin: 0 16px 0 0;
 }

@@ -5,7 +5,6 @@
         <title>Syntaxis TV</title>
 
         <link href="styles/style.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/li-scroller.css" rel="stylesheet" type="text/css"/>
 
         <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
         <script src="js/jquery.li-scroller.1.0.js" type="text/javascript"></script>
@@ -13,7 +12,7 @@
     </head>
     <body>
         <section id="left-side">
-            <img id='activity' src='#' />;
+            <img id='activity' />;
 
             <div id="footer">
                 <ul id="newsfeed">
