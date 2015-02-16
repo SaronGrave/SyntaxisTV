@@ -1,9 +1,8 @@
 /* liScroll styles */
 
 .tickercontainer { /* outer div */
-    width: 1528px;
+    width: 1600px;
     height: 58px;
-    margin: 6px;
     padding: 0;
     overflow: hidden;
     font-size: 42px;
@@ -11,15 +10,14 @@
 
 .tickercontainer .mask { /* that serves as a mask. so you get a sort of padding both left and right */
     position: relative;
-    left: 10px;
-    top: 8px;
-    width: 1508px;
+    top: 10px;
+    width: 1620px;
     overflow: hidden;
 }
 
 ul.newsticker { /* that's your list */
     position: relative;
-    left: 1540px;
+    left: 1600px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -29,7 +27,6 @@ ul.newsticker li {
     float: left;
     margin: 0;
     padding: 0;
-    background: #fff;
 }
 
 ul.newsticker a {
@@ -40,5 +37,4 @@ ul.newsticker a {
 
 ul.newsticker span {
     margin: 0 16px 0 0;
-    color: #08088A;
 }
