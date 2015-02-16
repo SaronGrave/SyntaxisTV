@@ -15,25 +15,12 @@ $(document).ready(function() {
 
 // Setup the clock
 function setupClock() {
-    updateClock();
-    setInterval('updateClock()', 1000);
-}
-
-// Compose Clock
-function updateClock() {
-    var currentTime = new Date();
-    var currentHours = currentTime.getHours();
-    var currentMinutes = currentTime.getMinutes();
-    var currentSeconds = currentTime.getSeconds();
-
-    // Pad the minutes and seconds with leading zeros, if required
-    currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
-    currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
-
-    // Compose the string for display
-    var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;// + " " + timeOfDay;
-
-    $("#clock").html(currentTimeString);
+    var date = new Date();
+    var time = date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds();
+    
+    var clock = $('#clock').FlipClock(time, {
+        countdown: false
+    });  
 }
 
 // Setup activity panel

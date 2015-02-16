@@ -4,9 +4,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>Syntaxis TV</title>
 
+        <link href="styles/flipclock.css" rel="stylesheet" type="text/css"/>
         <link href="styles/style.css" rel="stylesheet" type="text/css"/>
 
         <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
+        <script src="js/flipclock.min.js" type="text/javascript"></script>
         <script src="js/jquery.li-scroller.1.0.js" type="text/javascript"></script>
         <script src="js/jquery.jcarousel.min.js" type="text/javascript"></script>
     </head>
@@ -59,7 +61,7 @@
         </section>
 
         <aside id="right-side">
-            <div id="clock">--:--:-- PM</div>
+            <div id="clock"></div>
 
             <div id="sponsors">
                 <ul id="carousel" class="jcarousel-skin-tango">

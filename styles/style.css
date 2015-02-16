@@ -145,3 +145,18 @@ ul.newsticker a {
 ul.newsticker span {
     margin: 0 16px 0 0;
 }
+
+
+/** Flip clock */
+.flip-clock-label {
+    display: none;
+}
+
+.flip-clock-wrapper {
+    margin: 0px;
+}
+
+.flip-clock-wrapper ul {
+    width: 52px;
+    margin: 2px;
+}
