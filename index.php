@@ -22,7 +22,7 @@
     <!-- Logos -->
     <div class="logos">
         <!-- Syntaxis -->
-        <img class="logo" src="img/syntaxis_logo.png" title="Syntaxis logo" />
+        <img class="logo" src="img/syntaxis_logo2.png" title="Syntaxis logo" />
 
         <!-- Sponsoren -->
         <section class="sponsoren">

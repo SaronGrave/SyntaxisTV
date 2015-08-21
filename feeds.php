@@ -28,8 +28,7 @@ function parseXML($url) {
 // Displays a RSS feed using values retrieved by PHP in Javascript
 function showFeed($name, $url) {
     
-    $html = "<div class='divider green'></div>".
-            "<div class='feed'>".
+    $html = "<div class='feed'>".
                 "<div class='titel'>$name</div>".
                 "<div class='$name'></div>".
             "</div>";
@@ -51,8 +50,8 @@ function showFeed($name, $url) {
 }
 
 showFeed("Tweakers", "http://feeds.feedburner.com/tweakers/nieuws");
-showFeed("Nu", "http://www.nu.nl/rss/algemeen");
 showFeed("AndroidWorld", "http://feeds.feedburner.com/androidworld/zHTD");
+showFeed("Nu", "http://www.nu.nl/rss/algemeen");
 
 ?>
 
