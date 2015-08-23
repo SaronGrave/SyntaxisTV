@@ -14,6 +14,7 @@
     
     <script src="js/jquery.min.js"></script>
     <script src="js/flipclock.min.js"></script>
+    <script>var posters = <?php echo json_encode(glob("posters/*.*")); ?>;</script>
     <script src="js/script.js"></script>
 </head>
 
@@ -22,7 +23,7 @@
     <!-- Logos -->
     <div class="logos">
         <!-- Syntaxis -->
-        <img class="logo" src="img/syntaxis_logo2.png" title="Syntaxis logo" />
+        <img class="logo syntaxis" src="img/syntaxis_logo2.png" title="Syntaxis logo" />
 
         <!-- Sponsoren -->
         <section class="sponsoren">
@@ -37,9 +38,7 @@
 
     <!-- Posters -->
     <div class="poster">
-        <script>
-            var posters = <?php echo json_encode(glob("posters/*.*")); ?>;
-        </script>
+        <div class="poster-image"></div>
     </div>
 
     <!-- Panel -->

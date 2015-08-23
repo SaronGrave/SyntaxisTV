@@ -5,7 +5,7 @@ $(document).ready(function() {
     setupClock();
     
     showPosters();
-    setInterval(showPosters, 10000);
+    setInterval(showPosters, 20000);
     
 });
 
@@ -68,7 +68,12 @@ function showFeed(element, array, index) {
                    "<div class='date'>Geplaatst op: "+date+"</div>"+
                    "<div class='description'>"+array[index].description+"</div>";
            
-        $(element).html(html);
+           
+        $(element).slideUp(function() {
+            $(this).html(html).slideDown();
+        }); 
+
+        //$(element).html(html);
         index++;
     }
     return index;
@@ -84,7 +89,11 @@ function showPosters() {
             posterIndex = 0;
         }
         
-        $(".poster").html("<img src='"+posters[posterIndex]+"'/>");
-        posterIndex++;
+        $(".poster-image").fadeOut(2000, function() {
+            var html = "<img src='"+posters[posterIndex]+"'/>";
+            $(this).html(html).fadeIn(2000);
+            posterIndex++;
+        }); 
+
     }
 }
