@@ -5,7 +5,7 @@ $(document).ready(function() {
     setupClock();
     
     showPosters();
-    setInterval(showPosters, 20000);
+    setInterval(showPosters, 30000);
     
 });
 

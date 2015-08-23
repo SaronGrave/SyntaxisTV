@@ -14,7 +14,6 @@
     
     <script src="js/jquery.min.js"></script>
     <script src="js/flipclock.min.js"></script>
-    <script>var posters = <?php echo json_encode(glob("posters/*.*")); ?>;</script>
     <script src="js/script.js"></script>
 </head>
 
@@ -28,16 +27,13 @@
         <!-- Sponsoren -->
         <section class="sponsoren">
             <div class="titel">Onze sponsoren:</div>
-            <?php
-                foreach (glob("sponsoren/*.*") as $filename) {
-                    echo "<div class='sponsor'><img src='$filename' /></div>";
-                }
-            ?>
+            <?php include('sponsoren.php'); ?>
         </section>
     </div>	
 
     <!-- Posters -->
     <div class="poster">
+        <?php include('posters.php'); ?>
         <div class="poster-image"></div>
     </div>
 

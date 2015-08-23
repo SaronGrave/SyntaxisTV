@@ -33,7 +33,7 @@ function showFeed($name, $url) {
                 "<div class='titel'>$name</div>".
                 "<div class='$name'></div>".
             "</div>";
-    
+            
     echo $html;
     
     $feed = parseXML($url);
@@ -42,7 +42,7 @@ function showFeed($name, $url) {
                 "var counter".$name."=0;".
                 "function ".$name."Feed() {".
                     "counter".$name." = showFeed('.$name', $name, counter".$name.");".
-                    "setTimeout(".$name."Feed, 10000);".
+                    "setTimeout(".$name."Feed, 15000);".
                 "}".
                 $name."Feed();".
               "</script>";
@@ -55,4 +55,3 @@ showFeed("AndroidWorld", "http://feeds.feedburner.com/androidworld/zHTD");
 showFeed("Nu", "http://www.nu.nl/rss/algemeen");
 
 ?>
-
