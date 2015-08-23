@@ -6,7 +6,7 @@ $(document).ready(function() {
     
     showPosters();
     setInterval(showPosters, 30000);
-    
+
 });
 
 // Weergeeft de datum van vandaag

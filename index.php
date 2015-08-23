@@ -8,7 +8,8 @@
     <title>Syntaxis TV</title>
     <meta name="description" content="De website die getoond wordt op de TV bij het Syntaxis kantoor">
     <meta name="author" content="Syntaxis">
-
+    <meta http-equiv="refresh" content="300" >
+    
     <link rel="stylesheet" href="css/flipclock.css">
     <link rel="stylesheet" href="css/style.css">
     
